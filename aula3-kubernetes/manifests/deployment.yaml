@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
         - name: api               # o nome usado no kubectl set image ... api=...
-          image: ghcr.io/rodolfo-s-antunes/sentiment-api:v3
+          image: ghcr.io/rodolfo-s-antunes/sentiment-api:v2
           ports:
             - containerPort: 8000
 
