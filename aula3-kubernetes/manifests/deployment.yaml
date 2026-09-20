@@ -52,8 +52,8 @@ spec:
             httpGet:
               path: /health
               port: 8000
-            initialDelaySeconds: 8     # esperamos um pouco mais pois o modelo demora pra carregar
-            periodSeconds: 8           # não precisa checar tão rápido, economiza recursos
+            initialDelaySeconds: 8     # esperamos um pouco mais, modelo demora pra carregar
+            periodSeconds: 8           # não precisa checar tão rápido
             failureThreshold: 2        # 2 falhas já é suficiente pra tirar do ar
 
           livenessProbe:          # "ainda está vivo?"
@@ -61,5 +61,5 @@ spec:
               path: /health
               port: 8000
             initialDelaySeconds: 20    # dá mais tempo de sobra antes de considerar problema
-            periodSeconds: 15          # checagem mais espaçada, menos alarme falso
+            periodSeconds: 15          # checagem mais espaçada
             failureThreshold: 4        # mais tolerante antes de reiniciar o container
