@@ -13,7 +13,3 @@ output "resource_group" {
   value       = azurerm_resource_group.rg.name
 }
 
-output "nome_cluster" {
-  description = "Nome do cluster AKS criado."
-  value       = azurerm_kubernetes_cluster.aks.name
-}
